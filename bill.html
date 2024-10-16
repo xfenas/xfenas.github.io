@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบเสร็จรับเงิน</title>
+    <link rel="icon" href="/imgs/MOWINZ.png" type="image/png">
+    <link rel="stylesheet" href="/components/bill.css">
+</head>
+<body>
+    <h2>นี่ครับคุณลูกค้าาา</h2>
+    <div id="purchaseSummary"></div>
+    <div class="total" id="totalAmount"></div>
+    <div class="footer">
+        <p>ขอบคุณที่ใช้บริการ!</p>
+    </div>
+
+    <script>
+        function displayPurchaseDetails() {
+            let purchaseData = JSON.parse(localStorage.getItem('purchaseData'));
+
+            if (purchaseData) {
+                let html = '<h2>สรุปการซื้อ</h2>';
+                purchaseData.purchaseDetails.forEach(item => {
+                    html += `
+                        <div class="product-detail">
+                            <p><strong>ชื่อสินค้า:</strong> ${item.name}</p>
+                            <p><strong>จำนวน:</strong> ${item.quantity}</p>
+                            <p><strong>ราคาต่อหน่วย:</strong> ${numberWithCommas(item.pricePerUnit)} THB</p>
+                            <p><strong>ราคารวม:</strong> ${numberWithCommas(item.totalPrice)} THB</p>
+                        </div>`;
+                });
+
+                document.getElementById('purchaseSummary').innerHTML = html;
+                document.getElementById('totalAmount').innerText = `ยอดรวมทั้งหมด: ${numberWithCommas(purchaseData.totalAmount)} THB`;
+            } else {
+                document.getElementById('purchaseSummary').innerHTML = '<p>ไม่พบข้อมูลการซื้อ.</p>';
+            }
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        window.onload = displayPurchaseDetails;
+    </script>
+</body>
+</html>

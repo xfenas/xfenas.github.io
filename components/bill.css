@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 50%;
+    margin-top: 1rem;
+    background-color: #3f3f3f;
+    color: #ccc;
+}
+h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+.product-detail {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 50px;
+    background-color: #000000;
+    
+}
+.total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+}

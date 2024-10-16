@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    text-decoration: none;
+    color: #EEEEEE;
+}
+body{   
+    background-color: #31363F;
+    
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ff8800;
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 5vw;
+    background: linear-gradient(125deg, #10151d,#0a0024,#10151d);
+    z-index: 300;
+    
+}
+.nav-container{
+    max-width: 90vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.navlogo{
+    width: 3vw;
+    object-fit: contain;
+}
+.nav-profile{
+    display: flex;
+    align-items: center;
+    margin: 0 1.5rem;
+}
+.link_menu{
+    & a{
+        margin: 1.5rem;
+        color: #f2f2f2;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    & a:hover{
+        color: white;
+        opacity: 1;
+        filter: drop-shadow(5px 5px 10px #ffffff);
+    }
+}
+.nav-profile-name{
+    color: #f2f2f2;
+    font-size: 1.2vw;
+    margin-right: 10px;
+}
+.fa-cart-shopping{
+    font-size: 2vw;
+    color: #f2f2f2;
+}
+.nav-profile-cart{
+    position: relative;
+}
+.cartcount{
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    width: 25px;
+    height: 25px;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2f2f2;
+}
+.content-logo{
+    display: flex;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    & img{
+        margin-right: 1rem
+    }
+    & span{
+        text-decoration: none;
+        color: #EEEEEE;
+        font-size: 30px;
+        
+    }
+}
+.container {
+    display: flex;
+    height: 300vh;
+}
+.sidebar {
+    min-width: 260px;
+    height: 100%;
+    background-color: #202020;
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #f0c418;
+    border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 4px;
+}
+/* ปรับแต่งใน Firefox */
+.sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: #f0c418 #333;
+}
+.sidebar h2 {
+    color: #f0c418;
+    text-align: center;
+}
+button{
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+.sidebar ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    list-style-type: none;
+    padding: 0;
+    & a{
+        display: block;
+        padding: 1rem;
+    }
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    user-select: none;
+    
+}
+
+.sidebar ul li a:hover {
+    color: #f0c418;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #1a1a1a;
+    padding: 20px;
+    height: 300vh;
+    overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #f0c418;
+    border-radius: 4px;
+}
+.main-content::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #f0c418 #333;
+}
+header {
+    background-color: #f0c418;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #202020;
+}
+footer{
+    background: linear-gradient(125deg, #222831,#1e2531,#222831);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 100px;
+    padding: 1rem 5.5rem;
+}
+.searcth{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    margin: 2rem 0;
+    & p{
+        font-size: 30px;
+        margin-right: 1rem;
+    }
+    & input{
+        width: 50%;
+        height: 2vw;
+        color: #000000;
+        font-size: 20px;
+    }
+}

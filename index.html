@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOWINZ</title>
+    <link rel="icon" href="/imgs/MOWINZ.png" type="image/png">
+
+
+    <link rel="stylesheet" href="/components/main.css">
+    <link rel="stylesheet" href="/components/genaral.css">
+    <link rel="stylesheet" href="/components/product.css">
+    <link rel="stylesheet" href="/components/wellcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+                <a href="index.html" class="content-logo">
+                    <div>
+                        <img src="imgs/MOWINZ.png" class="navlogo">
+                    </div>
+                    <div>
+                        <span>MOWINZ SPEC</span>
+                    </div>   
+                </a>
+                <div class="link_menu">
+                    <a href="#">หน้าหลัก</a>
+                    <a href="#">ข้อมูลทั่วไป</a>
+                    <a href="#">contact</a>
+                </div>
+            <div class="nav-profile">
+                <p class="nav-profile-name" id="username"></p>
+                <div onclick="opencart()" class="nav-profile-cart">
+                    <i class="fas fa-cart-shopping" style="cursor: pointer;"></i>
+                    <div id="addcount" class="cartcount" style="display: none;">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h2>MY SPEC</h2>
+            <ul>
+                <li><a onclick="searthproduct('all')">All Product</a></li>
+                <li><a onclick="searthproduct('cpu')">CPU</a></li>
+                <li><a onclick="searthproduct('mainboard')">Mainboard</a></li>
+                <li><a onclick="searthproduct('vga')">VGA Card</a></li>
+                <li><a onclick="searthproduct('ram')">Memory</a></li>
+                <li><a onclick="searthproduct('hhd')">Harddisk</a></li>
+                <li><a onclick="searthproduct('ssd')">SSD</a></li>
+                <li><a onclick="searthproduct('psu')">Power Supply</a></li>
+                <li><a onclick="searthproduct('casecpu')">Case</a></li>
+                <li><a onclick="searthproduct('cpucoler')">CPU Coler</a></li>
+                <li><a onclick="searthproduct('monitor')">Monitor</a></li>
+                <li><a onclick="searthproduct('mouse')">Mouse</a></li>
+                <li><a onclick="searthproduct('mousepad')">Mouse Pad</a></li>
+                <li><a onclick="searthproduct('comboset')">Keybord / combo Set</a></li>
+                <li><a onclick="searthproduct('window')">Window</a></li>
+                <li><a onclick="searthproduct('microsoftOffice')">Microsoft Office</a></li>
+                <li><a onclick="searthproduct('anitivirus')">Anitivirus</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1 id="main-title">Welcome to MOWINZ SPEC</h1>
+            </header>
+            <div class="searcth">
+                <p>ค้นหาสินค้าที่ต้องการ :</p>
+                <input type="text" id="txt_search" onkeyup="searcthsomthing(this)">
+            </div>
+            <div class="container-allproduct">
+                <div class="product-con" id="productlis">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modaldesc" class="modal" style="display:none;">
+        <div onclick="closemodal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>Product detail</h2>
+            <div class="modaldesc-content">
+                    <img id="mdd-img" class="modaldesc-img" src="https://img.advice.co.th/images_nas/pic_product4/A0154221/A0154221OK_BIG_1.jpg" alt="">
+                    <div class="modaldesc-detall">
+                        <p id="mdd-name" style="font-size: 35px;">product name</p><br>
+                        <p id="mdd-desc" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel libero modi consequatur. Provident iusto veritatis odio adipisci minus velit laboriosam quisquam maxime facere fuga cum explicabo omnis blanditiis ex ut aspernatur, consectetur sapiente reprehenderit rerum maiores commodi. Corporis odio vitae nam fugit voluptatibus distinctio! Explicabo praesentium quam eos culpa inventore mollitia, atque, sed eius facilis vero rem? Corporis temporibus adipisci delectus consequatur nihil culpa totam at explicabo dolorem iste. Minima, quis molestias quod et rerum eum eligendi quasi expedita assumenda labore officiis. Fugit esse sit recusandae eos repudiandae dignissimos? Velit neque numquam, repudiandae deserunt similique totam quasi quidem at sint repellat fugiat possimus animi perferendis magni nesciunt consequuntur molestiae aspernatur odit? Impedit nobis minima est totam eius dolor libero voluptatum cupiditate asperiores aperiam quo exercitationem, deserunt et, aut optio? Dolore possimus quasi officiis debitis architecto, nemo vero sunt non reiciendis iure, perspiciatis aperiam laborum cumque accusamus quaerat ipsum neque impedit natus. Similique eaque voluptas corrupti mollitia natus facilis fuga nostrum blanditiis? Ullam voluptate doloremque nostrum odio tempora ex hic, possimus perferendis esse? Placeat error ipsa delectus vitae. Repellendus fugiat maxime assumenda quibusdam asperiores dolores possimus nesciunt quas deserunt debitis. Itaque voluptatem rem provident iusto quibusdam numquam, neque cupiditate fuga aperiam vitae tenetur beatae dolore consectetur voluptatum odit dolorem cumque blanditiis sit. Odio sequi vel nobis corporis quo quasi dolorum dicta magni dolore quaerat rem hic quas porro fugit magnam ad, quod quidem, exercitationem reiciendis aperiam officia? Quos numquam quis similique deleniti facilis. Delectus, tempora consequatur et eligendi aut ea mollitia velit vero fuga porro dolorum nobis reprehenderit, quo perferendis laudantium! Voluptatum aliquam minima deleniti quod soluta optio repellendus distinctio nesciunt cumque nulla, nostrum labore quibusdam excepturi fugiat recusandae ducimus amet hic cum! Amet, aspernatur autem dolores quo placeat dolorum sapiente maiores. Nulla eveniet provident aperiam tempora? Minima totam assumenda iure.</p><br>
+                        <p id="mdd-price">price 4000</p>
+                        <div class="btn-control">
+                            <button onclick="addtocart()" class="btn">Add to spec</button>
+                            <button onclick="closemodal()" class="btncan">Close</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalcart" class="modal" style="display: none;">
+        <div onclick="closemodal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>MY SPEC</h2>
+            <div id="mycart" class="cartlist">
+                <div class="cartlist-item">
+                    <div class="cartlist-left">
+                        <img src="https://img.advice.co.th/images_nas/pic_product4/A0154221/A0154221OK_BIG_1.jpg" alt="">
+                        <div class="cardlist-detail">
+                            <p style="font-size: 20px;">product name</p>
+                            <p>price 3000</p>
+                        </div>
+                    </div>
+                    <div class="cartlist-right">
+                        <p class="btnc">-</p>
+                        <p style="margin: 0 1rem;color: black;font-size: 25px;">1</p>
+                        <p class="btnc">+</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="purchase()" class="btn btn-buy">Buy</button>
+            <button onclick="closemodal()" class="btn">Cancle</button>
+        </div>
+    </div>
+</body>
+</html>
